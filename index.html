@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="align_header">
+        
+        <h1 class="header_title"><span class="primary_color">Control</span>Finance</h1>
+        <div class="align_button">
+         <button class="register_value">Registrar novo valor</button>
+    </div>
+   
+      </div>
+     <dialog class="modal">
+       <div class="div_modal">
+         <div class="align_modal">
+           <div class="title_and_close">
+             <h2 class="title_modal">Registro de valor</h2>
+             <i class="fa-solid fa-x close_modal"></i>
+           </div>
+         
+             <p class="paragraph_modal">Digite o valor e em seguida aperte no botao referente ao tipo de valor</p>
+             <h2 class="text_value">Valor</h2>
+             <input id="new_value" type="text" placeholder="R$ 00,00">
+             <div class="align_input_and_output">
+               <h2 class="title_type_value">Tipo de valor</h2>
+               <button id="input_value" 
+               class="default_button"
+               >Entrada</button>
+               <button class="default_button"
+               id="output_value" >Saida</button>
+             </div>
+             <div class="align_insert_and_cancel">
+               <button class="default_button-2  button_cancel" id="Cancelar" >Cancelar</button>
+               <button class="default_button-2  button_insert" id="add_newValue">Inserir valor</button>
+             </div>
+           
+         </div>
+       </div>
+     </dialog>
+   </header>
+   <div class="container">
+
+   <nav class="nav_bar">
+     <h2 class="navbar_title">Resumo financeiro</h2>
+     <ul class="nav_buttons">
+       <button class="option_button"id="todos">Todos</button>
+       <button class="option_button" id="entradas">Entradas</button>
+       <button class="option_button" id="saidas">Saidas</button>
+     </ul>
+   </nav>
+   <div class="div_sum">
+     <div class="align_sum_items">
+       <h2 class="h2_sum">Soma dos valores</h2>
+       <span class="span_sum" id="soma"></span>
+     </div>
+   </div>
+   <main id="app">
+   </main>
+   </div>
+    <script type="module" src="./src/scripts/modal.js"></script>
+    <script type="module" src="./src/scripts/valuesDatabase.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
+  </body>
+</html>
